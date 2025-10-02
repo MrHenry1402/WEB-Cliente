@@ -4,12 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para obtener y mostrar las tareas
     function fetchAndDisplayTasks() {
-        console.log('Fetching tasks...');
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
             .then(data => {
-                console.log('Tasks fetched:', data); // Verificación de los datos recibidos
-
                 // Mostrar solo los primeros 10 elementos
                 const tasks = data.slice(0, 10);
 
@@ -23,14 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     todoList.appendChild(listItem);
                 });
             })
-            .catch(error => {
-                console.error('Error fetching tasks:', error);
-            });
+            .catch(error => console.error('Error fetching tasks:', error));
     }
 
     // Función para descargar las tareas
     function downloadTasks() {
-        console.log('Downloading tasks...');
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
             .then(data => {
@@ -43,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.download = 'todo-list.json';
                 link.click(); // Hacer clic en el enlace para iniciar la descarga
             })
-            .catch(error => {
-                console.error('Error downloading tasks:', error);
-            });
+            .catch(error => console.error('Error downloading tasks:', error));
     }
 
     // Mostrar las tareas cuando se carga la página
