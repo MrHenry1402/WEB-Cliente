@@ -1,0 +1,14 @@
+/* Estilos para la página */
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 2rem; }
+header { margin-bottom: 1.5rem; }
+h1 { font-size: 1.75rem; margin: 0; }
+h2 { font-size: 1.125rem; margin: 1rem 0 0.5rem; color: #333; }
+.subtitle { color: #666; font-size: 0.95rem; margin-top: 0.25rem; }
+.task { margin: 10px 0; display: flex; align-items: center; }
+.task span { flex-grow: 1; }
+.task button { margin-left: 10px; }
+/* Marcar tareas como completadas (tacharlas) */
+.completed {
+    text-decoration: line-through;  /* Tacha el texto */
+    color: #777;  /* Cambia el color a gris */
+}
